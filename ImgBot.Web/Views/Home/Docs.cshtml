@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "ImgBot - Docs";
+}
+
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <h3>Collapsible Sidebar</h3>
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li>
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li><a href="#">Page</a></li>
+                <li><a href="#">Page</a></li>
+                <li><a href="#">Page</a></li>
+            </ul>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </li>
+    </ul>
+</nav>
+
+<div id="doc-content">
+    <div class="row row-docs-hero">
+        <h1>Docs</h1>
+    </div>
+    <div class="row row-light">
+        <h2 id="schedule">Schedule</h2>
+        <p>You can set a schedule for your ImgBot PRs through the .imgbotconfig file in the root of your repo</p> 
+        <p>This will effectively set the maximum frequency of pull requests submitted from ImgBot to your repo. This is ideal for projects that receive many image updates and don't want to see optimizations until they can all be batched up together. Most projects will benefit the most form the default setting of recieving image optimizations from ImgBot as new images are added to the project.</p>
+        <p>If you do want to set a schedule for ImgBot pull requests the current supported values are 'daily', 'weekly', and 'monthly'.  This will limit the pull requests sent from ImgBot to your project.</p>
+        <code>
+        .imgbotconfig
+        <pre>
+{
+    "schedule": "weekly"
+}
+        </pre>
+        </code>
+    </div>
+</div>

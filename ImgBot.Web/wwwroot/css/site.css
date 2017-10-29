@@ -73,3 +73,27 @@ h4 {
         margin-right: 30px;
     }
 }
+
+#sidebar {
+    width: 225px;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #000;
+}
+
+.row-docs-hero {
+    background-image: url('../images/docs-hero.jpg');
+}
+
+#doc-content {
+    position: absolute;
+    left: 240px;
+    width: 100%;
+    top: 0;
+}
+
+#doc-content > div {
+    padding-left: 50px;
+}
